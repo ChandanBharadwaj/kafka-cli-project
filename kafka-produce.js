@@ -6,7 +6,7 @@ const kafka = new Kafka({
   const producer = kafka.producer({
     allowAutoTopicCreation: false,
     transactionTimeout: 30000
-})
+});
 
 const run = async () => {
     await produceMessage();
@@ -14,7 +14,7 @@ const run = async () => {
 const produceMessage = async () => {
     await producer.connect();
     try {
-      const topic = 'user-topic-2'; // Replace with the name of your Kafka topic
+      const topic = 'user-topic'; // Replace with the name of your Kafka topic
       const message = {
         key: '1', // Optional: Replace with your desired message key
         value: JSON.stringify({
@@ -23,7 +23,7 @@ const produceMessage = async () => {
             "add": {
               "pin": "3423"
             }
-          }); 
+          })
       };
   
       await producer.send({
