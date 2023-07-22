@@ -1,0 +1,14 @@
+{
+  "name": "kafka-cli-project",
+  "version": "1.0.0",
+  "description": "1. to start  docker-compose up -d\r 2. To stop docker-compose down\r 3. TOPIC Name: user-topic\r 4. Upload a schema \r POST http://localhost:8081/subjects/user-topic-value/versions\r Content-Type:application/vnd.schemaregistry.v1+json\r {\r   \"schemaType\": \"JSON\",\r   \"schema\":\"{\\r\\n    \\\"type\\\": \\\"object\\\",\\r\\n    \\\"properties\\\": {\\r\\n      \\\"id\\\": {\\r\\n        \\\"type\\\": \\\"integer\\\"\\r\\n      },\\r\\n      \\\"name\\\": {\\r\\n        \\\"type\\\": \\\"string\\\"\\r\\n      },\\r\\n      \\\"age\\\": {\\r\\n        \\\"type\\\": \\\"integer\\\"\\r\\n      }\\r\\n    },\\r\\n    \\\"required\\\": [\\r\\n      \\\"id\\\",\\r\\n      \\\"name\\\"\\r\\n    ]\\r\\n  }\"\r }",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "kafkajs": "^2.2.4"
+  }
+}

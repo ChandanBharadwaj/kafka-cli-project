@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "age": { "type": "integer" },
+    "add": {
+      "type": "object",
+      "properties": {
+        "pin": {
+          "type": "string"
+        }
+      },
+      "required": ["pin"]
+    }
+  },
+  "required": ["name", "age", "add"]
+}
